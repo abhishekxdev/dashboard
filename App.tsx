@@ -4,6 +4,7 @@ import { Sidebar } from './components/Sidebar';
 import { DashboardHeader } from './components/DashboardHeader';
 import { RevenueTable } from './components/RevenueTable';
 import { StatWidgets } from './components/StatWidgets';
+import { Overview } from './components/Overview';
 import { ArrGrowthChart, FunnelConversion } from './components/Charts';
 import { getDashboardInsights } from './services/geminiService';
 import { REVENUE_DATA } from './constants';
@@ -32,6 +33,7 @@ const App: React.FC = () => {
         <div className="p-6 grid grid-cols-12 gap-6">
           {/* Main Content Area */}
           <div className="col-span-12 lg:col-span-8 space-y-6">
+            <Overview />
             <RevenueTable />
             
             {/* Gemini Trigger Button */}
